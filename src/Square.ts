@@ -1,42 +1,35 @@
-
-export class Square{
+export class Square {
     x: number;
     y: number;
-    energy: number;
-    isAdult: boolean;
-    age: number;
-    isSick: boolean;
     color: string;
-
-    constructor(x: number, y: number, isAdult: boolean) {
-        this.x = x;
-        this.y = y;
-        this.energy = 10;
-        this.isAdult = isAdult;
-        this.age = 0;
-        this.isSick = false;
-        this.color = isAdult ? "blue" : "lightblue";
-      }
-    
-    updateDay(): void {
-        if(this.isSick){
-            this.energy = 0;
-        }else{
-            this.age++;
-            if(this.age>=5){
-                this.isAdult=true;
-                this.color="blue";
-            }
-        }
+    speed: number;
+    energy: number;
+    foodGathered: boolean;
+  
+    constructor(x: number, y: number) {
+      this.x = x;
+      this.y = y;
+      this.color = "gray"; // Kolor domyślny
+      this.speed = 1; // Prędkość
+      this.energy = 100; // Energia
+      this.foodGathered = false;
     }
-    move():void{
-
+  
+    startDay() {
+      this.foodGathered = false;
+      // Logika aktywności kwadratu w ciągu dnia
     }
-    reproduce():boolean{
-        if(this.isAdult && this.energy >= 20){
-            this.energy -= 10;
-            return true;
-        }
-        return false;
+  
+    startNight() {
+      // Logika aktywności kwadratu w nocy
     }
-}
+  
+    searchForFood(foodPositions: { x: number; y: number }[]) {
+      // Logika poszukiwania jedzenia
+    }
+  
+    returnHome() {
+      // Logika powrotu do domu
+    }
+  }
+  
