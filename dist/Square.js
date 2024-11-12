@@ -2,23 +2,23 @@ var Square = /** @class */ (function () {
     function Square(x, y) {
         this.x = x;
         this.y = y;
-        this.color = "gray"; // Kolor domyślny
-        this.speed = 1; // Prędkość
-        this.energy = 100; // Energia
+        this.color = "gray"; // Default color
+        this.speed = 1; // Speed
+        this.energy = 100; // Energy
         this.foodGathered = false;
     }
     Square.prototype.startDay = function () {
         this.foodGathered = false;
-        // Logika aktywności kwadratu w ciągu dnia
+        // Daytime activity logic
     };
     Square.prototype.startNight = function () {
-        // Logika aktywności kwadratu w nocy
+        // Nighttime activity logic
     };
     Square.prototype.searchForFood = function (foodPositions) {
-        // Logika poszukiwania jedzenia
+        // Food search logic
     };
     Square.prototype.returnHome = function () {
-        // Logika powrotu do domu
+        // Return home logic
     };
     return Square;
 }());

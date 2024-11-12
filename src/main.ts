@@ -5,17 +5,17 @@ window.onload = () => {
   const context = canvas.getContext("2d")!;
 
   if (!context) {
-    console.error("Nie udało się uzyskać kontekstu 2D!");
+    console.error("Failed to get 2D context!");
     return;
   }
 
   const simulation = new Simulation();
 
-  // Funkcja rysująca
+  // Drawing function
   function draw() {
-    context.clearRect(0, 0, canvas.width, canvas.height); // Czyść ekran
+    context.clearRect(0, 0, canvas.width, canvas.height); // Clear screen
 
-    // Rysuj jedzenie
+    // Draw food
     simulation.foodPositions.forEach(food => {
       context.fillStyle = "green";
       context.beginPath();
@@ -23,21 +23,21 @@ window.onload = () => {
       context.fill();
     });
 
-    // Rysuj kwadraty
+    // Draw squares
     simulation.squares.forEach(square => {
       context.fillStyle = square.color;
-      context.fillRect(square.x, square.y, 10, 10); // Kwadrat 10x10
+      context.fillRect(square.x, square.y, 10, 10); // 10x10 square
     });
 
-    requestAnimationFrame(draw); // Wywołaj kolejną klatkę
+    requestAnimationFrame(draw); // Call next frame
   }
 
-  // Dodanie listenera do przycisku Start
+  // Add event listener to Start button
   const startButton = document.getElementById("startButton") as HTMLButtonElement;
   startButton.addEventListener("click", () => {
-    console.log("Start button clicked!");  // Potwierdzenie kliknięcia
-    simulation.start();  // Uruchamiamy symulację
-    draw();  // Rozpoczynamy rysowanie
-    startButton.disabled = true;  // Wyłączamy przycisk po kliknięciu
+    console.log("Start button clicked!");  // Confirm button click
+    simulation.start();  // Start simulation
+    draw();  // Start drawing
+    startButton.disabled = true;  // Disable button after click
   });
 };

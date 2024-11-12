@@ -9,27 +9,26 @@ export class Square {
     constructor(x: number, y: number) {
       this.x = x;
       this.y = y;
-      this.color = "gray"; // Kolor domyślny
-      this.speed = 1; // Prędkość
-      this.energy = 100; // Energia
+      this.color = "gray"; // Default color
+      this.speed = 1; // Speed
+      this.energy = 100; // Energy
       this.foodGathered = false;
     }
   
     startDay() {
       this.foodGathered = false;
-      // Logika aktywności kwadratu w ciągu dnia
+      // Daytime activity logic
     }
   
     startNight() {
-      // Logika aktywności kwadratu w nocy
+      // Nighttime activity logic
     }
   
     searchForFood(foodPositions: { x: number; y: number }[]) {
-      // Logika poszukiwania jedzenia
+      // Food search logic
     }
   
     returnHome() {
-      // Logika powrotu do domu
+      // Return home logic
     }
-  }
-  
+}

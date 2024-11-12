@@ -1,13 +1,13 @@
 {
     "compilerOptions": {
-      "target": "ES5",             // Kompiluje do ES5, ale możesz zmienić na ES6, jeśli chcesz używać nowych funkcji JS.
-      "module": "ES6",             // Używa modułów ES6 (ważne dla przeglądarek).
-      "outDir": "./dist",          // Kompilowany kod JS trafi do folderu "dist".
-      "rootDir": "./src",          // Kod źródłowy znajduje się w folderze "src".
-      "strict": true,              // Włącza tryb ścisłej kontroli typów w TypeScript.
-      "lib": ["es2015", "dom"],    // Dodaje wsparcie dla nowych funkcji JS i API przeglądarki (np. DOM).
-      "esModuleInterop": true      // Umożliwia importowanie modułów CommonJS w sposób zgodny z ES6.
+      "target": "ES5",             
+      "module": "ES6",              
+      "outDir": "./dist",           
+      "rootDir": "./src",           
+      "strict": true,               
+      "lib": ["es2015", "dom"],     
+      "esModuleInterop": true       
     },
-    "include": ["src"]             // Kompilator będzie przetwarzać pliki w folderze "src".
+    "include": ["src"]
   }
   
